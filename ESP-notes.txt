@@ -1,0 +1,11 @@
+Add ESP32 Board Manager entry: 
+In the Arduino IDE, navigate through File -> Preferences -> Settings tab -> Additional Boards Manager URL, add below URL 
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+Click OK to save the Preferences
+
+Add ESP32 Board Manager to Arduino IDE: 
+Navigate through Tools -> Board -> Boards Manager, in Search enter "ESP32" and install library from espressif author. 
+
+
+ESP8266 Board Manager URL:
+https://arduino.esp8266.com/stable/package_esp8266com_index.json
