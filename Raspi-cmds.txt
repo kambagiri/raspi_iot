@@ -1,0 +1,6 @@
+
+##Commands: 
+
+>> grim (hit-enter) => takes a screenshot of current screen. 
+
+>> scrot (hit-enter) => takes a screenshot in X11 mode. 
