@@ -7,7 +7,7 @@
 
 
 # Install DOTNET SDK in Raspi: 
-## Commands: 
+### Commands: 
 1. wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
 //GRANTS RUNTIME PERMISSIONS
 2. chmod +x ./dotnet-install.sh 
@@ -18,10 +18,10 @@
 //TO INSTALL SPECIFIC VERSION
 5. ./dotnet-install.sh --channel 9.0
 
-## POST INSTALL: 
+### POST INSTALL: 
 dotnet command doesn't work immediately. to get it work follow below instructions; 
 //Create a symlink to the dotnet file: 
 sudo ln -s ~/.dotnet/dotnet /usr/bin/dotnet
 
-## Add to PATH Environment variable: 
+### Add to PATH Environment variable: 
 export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
