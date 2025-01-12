@@ -1,0 +1,5 @@
+Create a Hello World Project: 
+ * navigate to the folder
+ * type command >> dotnet new console -o app 
+ * creates a folder with the name "app" --> navigate to folder and type command >> dotnet run 
+ * to compile the code: >> dotnet build. 
