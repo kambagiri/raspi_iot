@@ -1,0 +1,47 @@
+
+
+// Install mosquitto mqtt service 
+sudo apt install -y mosquitto mosquitto-clients
+
+
+//Get details about mosquitto service start/ stop / status 
+sudo systemctl enable mosquitto.service
+sudo systemctl start mosquitto
+sudo systemctl status mosquitto
+sudo systemctl stop mosquitto
+
+// Get details where the mosquitto service is running
+mosquitto -v 
+
+
+//Enable remote access: 
+//navigate to /etc/mosquitto/mosquitto.conf ; Add below lines of code. 
+sudo nano /etc/mosquitto/mosquitto.conf
+listener 1883 (port number) 
+allow_anonymous true 
+
+sudo systemctl restart mosquitto 
+
+============================================== 
+
+Add user password: 
+sudo mosquitto_passwd -c /etc/mosquitto/passwd  
+< here enter the password> 
+
+sudo nano /etc/mosquitto/mosquitto.conf 
+
+add below lines of code: 
+per_listener_settings true 
+
+allow_anonymous false
+listener 1883
+password_file /etc/mosquitto/passwd
+
+==========================================
+mosquitto_sub -h localhost -p 2883 -t test/topic -u adminGiri -P admingiri123@ 
+mosquitto_pub -h localhost -p 2883 -t test/topic -m "hello world" -u adminGiri -P admingiri123@
+
+
+
+
+
